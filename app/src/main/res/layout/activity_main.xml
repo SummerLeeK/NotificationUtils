@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/sound"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="铃声" />
+
+            <CheckBox
+                android:id="@+id/vibrate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="震动" />
+
+
+            <CheckBox
+                android:id="@+id/light"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="指示灯" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/addMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="NormalMessage"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/heads_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="HEADSUP"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/big_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="bigpic"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/big_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="bigtext"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="notifyprogress"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/twobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="TwoButton"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/remoteviews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="remoteviews"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/cancelMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="cancelMessage"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/cancalAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="cancalAll"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/cancelSome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="cancelSome"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
