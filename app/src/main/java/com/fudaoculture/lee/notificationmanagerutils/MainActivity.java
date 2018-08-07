@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.addMessage:
                 notificationId += 1;
-                twoUtils.notifyMessageType(notificationId, pendingIntent, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round, ticker, subText, contentTitle, contentText, NotificationCompat.PRIORITY_HIGH, sound, vibrate, light);
+                twoUtils.notifyMessage(notificationId, pendingIntent, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round, ticker, subText, contentTitle, contentText, NotificationCompat.PRIORITY_HIGH, sound, vibrate, light);
 
                 break;
             case R.id.heads_up:
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 RemoteViews remoteViews = new RemoteViews(getPackageName(), R.layout.remote_views_layout);
                 remoteViews.setTextViewText(R.id.title, contentTitle);
                 remoteViews.setTextViewText(R.id.content, contentText);
-                twoUtils.notifyRemoteView(remoteViews, notificationId, pendingIntent, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round, ticker, subText, contentTitle, contentText, NotificationCompat.PRIORITY_HIGH, sound, vibrate, light);
+                twoUtils.notifyRemoteViews(remoteViews, notificationId, pendingIntent, R.mipmap.ic_launcher, R.mipmap.ic_launcher_round, ticker, subText, contentTitle, contentText, NotificationCompat.PRIORITY_HIGH, sound, vibrate, light);
                 break;
             case R.id.cancelMessage:
                 notificationUtils.cancelCurrentNotification();

@@ -20,9 +20,6 @@ import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import android.widget.RemoteViews;
 
-import java.util.ArrayList;
-
-import static android.support.v4.app.NotificationCompat.BADGE_ICON_SMALL;
 
 /**
  * Created by Administrator on 2018/8/3 0003.
@@ -62,6 +59,12 @@ public class NotificationUtils {
     }
 
 
+    /**
+     * 创建一个channel
+     * @param channelGroupId
+     * @param channelId
+     * @param channelName
+     */
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void createChannel(String channelGroupId, String channelId, String channelName) {
         if (channelBuilder == null) {
@@ -83,6 +86,10 @@ public class NotificationUtils {
         notificationManager.createNotificationChannel(notificationChannel);
     }
 
+
+    /**
+     * @param channelBuilder
+     */
     public void setChannelBuilder(ChannelBuilder channelBuilder) {
         this.channelBuilder = channelBuilder;
         init(channelBuilder.channelId, channelBuilder.channelName, channelBuilder.channelGroupId, channelBuilder.channelGroupName);
@@ -577,10 +584,10 @@ public class NotificationUtils {
     /**
      * 创建一个Notification
      *
-     * @param pendingIntent
+     * @param pendingIntent 通知内容被点击处理
      * @param largeIcon
      * @param smallIcon
-     * @param ticker
+     * @param ticker ticker在5.0以上没有显示 在[4.0,5.0)在状态栏有短暂的停留
      * @param subText
      * @param contentTitle
      * @param contentText
