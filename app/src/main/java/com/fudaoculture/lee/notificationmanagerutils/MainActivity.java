@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cancalAll.setOnClickListener(this);
         cancelSome.setOnClickListener(this);
         headsUp.setOnClickListener(this);
-        channelBuilder = new NotificationUtils.ChannelBuilder("1号频道组", "1号频道", NotificationManager.IMPORTANCE_DEFAULT)
+        channelBuilder = new NotificationUtils.ChannelBuilder("1号频道组", "1号频道", "一号频道名字", NotificationManager.IMPORTANCE_DEFAULT)
                 .setChannelName("一号频道名字").setByPassDnd(true).setLightColor(Color.GREEN)
                 .setShowBadge(false).setEnableLight(true).setEnableSound(true).setEnableVibrate(true)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         notificationUtils.init("一号频道", "一号频道名字", "一号频道组", "一号频道组名字");
 
 
-        twoChannelBuilder = new NotificationUtils.ChannelBuilder("一号频道组", "二号频道", NotificationManager.IMPORTANCE_HIGH)
+        twoChannelBuilder = new NotificationUtils.ChannelBuilder("一号频道组", "二号频道", "二号频道名字", NotificationManager.IMPORTANCE_HIGH)
                 .setChannelName("二号频道名字").setByPassDnd(true).setLightColor(Color.GREEN)
                 .setShowBadge(false).setEnableLight(false).setEnableSound(false).setEnableVibrate(false)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC);
