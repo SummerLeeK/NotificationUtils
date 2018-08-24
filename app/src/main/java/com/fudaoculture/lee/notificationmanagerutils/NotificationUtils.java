@@ -61,6 +61,7 @@ public class NotificationUtils {
 
     /**
      * 创建一个channel
+     *
      * @param channelGroupId
      * @param channelId
      * @param channelName
@@ -68,8 +69,7 @@ public class NotificationUtils {
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void createChannel(String channelGroupId, String channelId, String channelName) {
         if (channelBuilder == null) {
-            channelBuilder = new ChannelBuilder(channelGroupId, channelId, NotificationManager.IMPORTANCE_DEFAULT)
-                    .setChannelName(channelName)
+            channelBuilder = new ChannelBuilder(channelGroupId, channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT)
                     .setByPassDnd(false)
                     .setChannelGroupId(channelGroupId)
                     .setShowBadge(false)
@@ -150,10 +150,11 @@ public class NotificationUtils {
 
         private int lightColor = -1;
 
-        public ChannelBuilder(String channelGroupId, String channelId, int importance) {
+        public ChannelBuilder(String channelGroupId, String channelId, String channelName, int importance) {
             this.channelGroupId = channelGroupId;
             this.channelId = channelId;
             this.importance = importance;
+            this.channelName = channelName;
         }
 
         public ChannelBuilder setChannelGroupId(String channelGroupId) {
@@ -587,7 +588,7 @@ public class NotificationUtils {
      * @param pendingIntent 通知内容被点击处理
      * @param largeIcon
      * @param smallIcon
-     * @param ticker ticker在5.0以上没有显示 在[4.0,5.0)在状态栏有短暂的停留
+     * @param ticker        ticker在5.0以上没有显示 在[4.0,5.0)在状态栏有短暂的停留
      * @param subText
      * @param contentTitle
      * @param contentText
